@@ -14,9 +14,9 @@ class GeneratedText(TimeStamp):
         created_at (DateTimeField): The timestamp when the entry was created.
     """
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    prompt = models.TextField()
-    generated_text = models.TextField()
+    user: models.ForeignKey = models.ForeignKey(User, on_delete=models.CASCADE)
+    prompt: models.TextField = models.TextField()
+    generated_text: models.TextField = models.TextField()
 
 
 class GeneratedImage(TimeStamp):
@@ -30,6 +30,6 @@ class GeneratedImage(TimeStamp):
         created_at (DateTimeField): The timestamp when the image was created.
     """
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    prompt = models.TextField()
-    image_url = models.URLField()
+    user: models.ForeignKey = models.ForeignKey(User, on_delete=models.CASCADE)
+    prompt: models.TextField = models.TextField()
+    image_url: models.URLField = models.URLField()

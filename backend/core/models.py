@@ -1,6 +1,7 @@
 from django.db import models
 import uuid
 from django.utils import timezone
+from typing import Type
 
 
 class TimeStamp(models.Model):
@@ -14,9 +15,13 @@ class TimeStamp(models.Model):
         updated_at (DateTimeField): Timestamp indicating when the instance was last updated, set automatically.
     """
 
-    uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
-    created_at = models.DateTimeField(default=timezone.now, editable=False)
-    updated_at = models.DateTimeField(auto_now=True)
+    uuid: models.UUIDField = models.UUIDField(
+        default=uuid.uuid4, editable=False, unique=True
+    )
+    created_at: models.DateTimeField = models.DateTimeField(
+        default=timezone.now, editable=False
+    )
+    updated_at: models.DateTimeField = models.DateTimeField(auto_now=True)
 
     class Meta:
-        abstract = True
+        abstract: bool = True
