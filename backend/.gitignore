@@ -1,0 +1,66 @@
+# Byte-compiled files
+*.py[cod]
+__pycache__/
+*.so
+
+# Django specific
+*.log
+db.sqlite3
+/media/
+/staticfiles/
+/static/
+/.env
+
+# Environment variables
+*.env
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# macOS files
+.DS_Store
+
+# Test and coverage reports
+*.cover
+*.py,cover
+.hypothesis/
+.tox/
+.coverage
+.coverage.*
+.cache
+coverage.xml
+nosetests.xml
+pytest_cache/
+test-results/
+
+# Build files
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Docker files
+*.pid
+*.log
+docker-compose.override.yml
+
+# Node and React (if using a frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+
+# Migrations (optional)
+*/migrations/*.py
+!*/migrations/__init__.py
